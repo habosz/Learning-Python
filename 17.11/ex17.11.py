@@ -94,7 +94,10 @@
 # mile = km * 0.621371192
 # print(f'{km} kilometra to {mile:.2f} mili.')
 
-# Zadanie 2.10
-C = float(input("Podaj wartość temeratury w Celcjuszach: "))
-F = (C * 9/5) + 32
-print(f'{C:.2f} stopni Celcjusza to {F:.2f} stopni Farenhajta')
+# # Zadanie 2.10
+# C = float(input("Podaj wartość temeratury w Celcjuszach: "))
+# F = (C * 9/5) + 32
+# print(f'{C:.1f} stopni Celcjusza to {F:.1f} stopni Farenhajta')
+
+
+
