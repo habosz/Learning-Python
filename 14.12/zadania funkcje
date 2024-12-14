@@ -1,0 +1,55 @@
+# FUNKCJE 
+# funkcja : pakuje w kontener pewien fragment kodu; wywoluje sie jezeli nawias jest na koncu 
+
+# def f(): 
+# 	return 2
+
+# print(f) # poda tylko lokalizacje tej kuncji w pamieci komputera 
+# print(f())
+
+# paramentryzacja 
+
+def f(a, b):
+	return a * b
+
+print(f(1, 2))
+print(f('99',2))
+print(f(4.56, 76.789))
+
+
+# Operator
+
+def f(a=3, b=6, operator='+', *args, **kwargs):  # mozemy domyslnie definiowac wartosci =x
+	# print(args)
+	# print(kwargs)
+	wynik = 'nieznany operator'
+	if operator == '+':
+		wynik = a + b
+	elif operator == '-':
+		wynik = a - b
+	elif operator == '*':
+		wynik = a * b
+
+	return wynik, args, kwargs
+	
+# koncepcja pozycyjna 
+print(f(7, 8, '+'))
+
+# key words arguments 
+print(f(operator='*'))
+
+# mozemy mieszkac, wykorzystywac jednoczesnie parametry pozycyjne i keywords, ale pozycyjne zawsze musz byc jako pierwsze
+
+# *args == wypisze dodatkowe argumenty (tylko pozycyjne), nadmiarowe, uzyte w funkcji, dzieki temu nawet jezeli bedzie wiecej argumentow
+# funkcja zadziala
+
+lista = [1, 2, 3]
+lista2 = [4, *lista] # gwiasta dodaje liste do listy bez zagniezdzenia, lista jest wjednowymiarowa
+print(lista2)
+
+# **kwargs == dla parametrow kluczowych keywords uzywamy 
+print(f(7, 8, '+', 7, 9, 0, c=5,))
+
+wynik1 = f()
+print(wynik1)
+print(wynik1[0]) # wysletlam 
